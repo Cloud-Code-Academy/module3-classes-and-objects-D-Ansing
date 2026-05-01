@@ -179,7 +179,7 @@ public with sharing class ClassesObjectsMethods {
         weekdaysMap.put('Saturday', '6');
         weekdaysMap.put('Sunday', '7');
         //use map to generate weekday number
-        string weekday = system.now().format('EEEE');
+        string weekday = dt.format('EEEE');
         return weekdaysMap.get(weekday);
         //return = system.now().format('u');    //Alternative-1 (Compact, but week numbering might start on sunday depending on region, less reliable)
         //return = string.valueof(math.mod(Date.newInstance(1900, 1, 7).daysBetween(system.now().date()),7));  //Alternative-2 (I'd prefer this one, it's clean, works anywhere, and only requires a single caracter change when changing the start of the week)
